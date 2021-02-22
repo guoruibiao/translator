@@ -27,7 +27,7 @@ class Container(QWidget):
         self.tipLabel = QLabel('------------------------------------------------------------', self)
         self.resultLabel = QLabel('文本显示区', self)
         self.checkBox = QCheckBox('开启监听剪切板变化', self)
-        self.copyButton = QPushButton('点击以拷贝音标到系统剪切板', self)
+        # self.copyButton = QPushButton('点击以拷贝音标到系统剪切板', self)
         self.label = QLabel('选中后监听系统剪切板，单词翻译后显示在最下方，当前剪切板内容：', self)
 
         self.radioGroup = QButtonGroup(self)
@@ -69,7 +69,7 @@ class Container(QWidget):
         self.setMaximumHeight(450)
 
         self.checkBox.stateChanged.connect(self.changeTitle)
-        self.copyButton.clicked.connect(self.copyToClipboard)
+        # self.copyButton.clicked.connect(self.copyToClipboard)
 
         self.resultLabel.setMinimumHeight(46)
 
@@ -77,7 +77,7 @@ class Container(QWidget):
         self.resultLayout.setSpacing(8)
         self.resultLayout.addWidget(self.label, 1, 0)
         self.resultLayout.addWidget(self.checkBox, 2, 0)
-        self.resultLayout.addWidget(self.copyButton, 3, 0)
+        # self.resultLayout.addWidget(self.copyButton, 3, 0)
         self.resultLayout.addWidget(self.tipLabel, 5, 0)
         self.resultLayout.addWidget(self.resultLabel, 6, 0)
         self.setLayout(self.resultLayout)
